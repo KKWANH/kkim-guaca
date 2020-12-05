@@ -6,14 +6,14 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:18:16 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:18:53 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:20:35 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /*
-**ft_put_str_input structure
+** ft_put_str_input structure
 **	if precision(fmt.pre) isnt negative
 **		put width by precision(fmt.pre), length:string and increase count
 **		put string by string, precision(fmt.pre) ;cut and increase count
