@@ -27,19 +27,19 @@ t_format				ft_format_parse_star(t_format fmt, va_list var)
 }
 
 /*
-ft_format_parse_dot - structure
-	get (string, start index), format, va_list
-	set index as start index + 1
-	if character is * :
-		set precision(fmt.pre) as vaarg(int)
-	if not :
-		set precision(fmt.pre) as 0
-		while character is number :
-			increase precision as character
+** ft_format_parse_dot - structure
+**	get (string, start index), format, va_list
+**	set index as start index + 1
+**	if character is * :
+**		set precision(fmt.pre) as vaarg(int)
+**	if not :
+**		set precision(fmt.pre) as 0
+**		while character is number :
+**			increase precision as character
 */
-int						ft_format_parse_dot(const char *str, int stt, t_format *fmt, va_list var)
+int				ft_format_parse_dot(const char *str, int stt, t_format *fmt, va_list var)
 {
-	int					idx;
+	int			idx;
 
 	idx = stt + 1;
 	if (str[idx] == '*')
@@ -68,25 +68,25 @@ t_format				ft_format_parse_digit(char chr, t_format fmt)
 }
 
 /*
-ft_format_parse_structure
-	if character is not for t_format :
-		break
-	if character is a type :
-		put that in fmt, and break
-	if character is 0 and width/minus is 0 :
-		put that in zero(fmt.zer)
-	if character is * :
-		execute fmt_format_parse_star
-	if character is number :
-		if star_flag(fmt.sta) is 1 :
-			set width(fmt.wid) 0
-		increase width(fmt.wid) as the character
-	if character is minus :
-		set minus(fmt.min) 1
-	if character is .
-		execute fmt_format_parse_dot
+** ft_format_parse_structure
+**	if character is not for t_format :
+**		break
+**	if character is a type :
+**		put that in fmt, and break
+**	if character is 0 and width/minus is 0 :
+**		put that in zero(fmt.zer)
+**	if character is * :
+**		execute fmt_format_parse_star
+**	if character is number :
+**		if star_flag(fmt.sta) is 1 :
+**			set width(fmt.wid) 0
+**		increase width(fmt.wid) as the character
+**	if character is minus :
+**		set minus(fmt.min) 1
+**	if character is .
+**		execute fmt_format_parse_dot
 */
-int						ft_format_parse(const char *str, int idx, t_format *fmt, va_list var)
+int				ft_format_parse(const char *str, int idx, t_format *fmt, va_list var)
 {
 	while (str[idx])
 	{
