@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_util_1.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:24:42 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:24:42 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int						ft_numlen(int num)
@@ -65,7 +77,8 @@ char					*ft_itoa(int nm1)
 	return (rst);
 }
 
-char					*ft_base(unsigned long long num, int bas, int cnt, char *str)
+char					*ft_base(unsigned long long num, int bas,
+						int cnt, char *str)
 {
 	while (num != 0)
 	{

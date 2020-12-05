@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_util_0.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:24:07 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:24:22 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 char					*ft_strdup(const char *src)
@@ -40,7 +52,7 @@ int						ft_putstr(char *str)
 int						ft_putstr_prec(char *str, int pre)
 {
 	int					idx;
-	
+
 	idx = 0;
 	while (str[idx] && idx < pre)
 		ft_putchar(str[idx++]);

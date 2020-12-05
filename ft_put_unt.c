@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:22:29 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:22:30 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:23:22 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int						ft_put_unt_sub(t_format fmt, char *unt)
 /*
 **ft_put_unt structure
 **	set num as (4294967295(max number of unsigned int) + num + 1)
-**	 to unsigned int 
+**	 to unsigned int
 **	if precision(fmt.pre) is 0 and number is 0 too :
 **		put width with width(fmt.wid) and increase count
 **		break program
