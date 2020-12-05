@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_unt.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:22:29 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:22:30 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int						ft_put_unt_input(t_format fmt, char *unt)
@@ -12,19 +24,22 @@ int						ft_put_unt_input(t_format fmt, char *unt)
 }
 
 /*
-ft_put_unt_sub structure
-	if minus(fmt.min) is 1 : (means left align)
-		put unt and increase count
-	if precision(fmt.pre) isnt negative and precision(fmt.pre) is smaller than length:unt :
-		set precision as length:unt
-	if precision(fmt.pre) isnt negative :
-		set width(fmt.wid) as width(fmt.wid) - precision(fmt.pre)
-		put width by width(fmt.wid) and increase count
-	if not :
-		put width by width(fmt.wid), length:unt, zero(fmt.zer) and increase count
-	if minus(fmt.min) is 0 : (means right align)
-		put unt and increase count
+**ft_put_unt_sub structure
+**	if minus(fmt.min) is 1 : (means left align)
+**		put unt and increase count
+**	if precision(fmt.pre) isnt negative and
+**	   precision(fmt.pre) is smaller than length:unt :
+**		set precision as length:unt
+**	if precision(fmt.pre) isnt negative :
+**		set width(fmt.wid) as width(fmt.wid) - precision(fmt.pre)
+**		put width by width(fmt.wid) and increase count
+**	if not :
+**		put width by width(fmt.wid), length:unt, zero(fmt.zer) and
+**		 increase count
+**	if minus(fmt.min) is 0 : (means right align)
+**		put unt and increase count
 */
+
 int						ft_put_unt_sub(t_format fmt, char *unt)
 {
 	int					cnt;
@@ -47,14 +62,16 @@ int						ft_put_unt_sub(t_format fmt, char *unt)
 }
 
 /*
-ft_put_unt structure
-	set num as (4294967295(max number of unsigned int) + num + 1) to unsigned int 
-	if precision(fmt.pre) is 0 and number is 0 too :
-		put width with width(fmt.wid) and increase count
-		break program
-	set unt(char *) as result of ft_itoa:num
-	put unt with ft_put_unt_sub and increase count
+**ft_put_unt structure
+**	set num as (4294967295(max number of unsigned int) + num + 1)
+**	 to unsigned int 
+**	if precision(fmt.pre) is 0 and number is 0 too :
+**		put width with width(fmt.wid) and increase count
+**		break program
+**	set unt(char *) as result of ft_itoa:num
+**	put unt with ft_put_unt_sub and increase count
 */
+
 int						ft_put_unt(t_format fmt, unsigned int num)
 {
 	char				*unt;
