@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 13:45:35 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:00:47 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:32:55 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int						ft_format_parse_dot(const char *str, int stt,
 	else
 	{
 		fmt->pre = 0;
-		while (ft_is_numb(str[idx]) != 0)
+		while (ft_n(str[idx]) != 0)
 		{
 			fmt->pre = (fmt->pre * 10) + (str[idx] - '0');
 			++idx;
@@ -121,9 +121,9 @@ int						ft_format_parse(const char *s, int i,
 		}
 		if (ft_n(s[i]) == 1)
 			*fmt = ft_format_parse_digit(s[i], *fmt);
-		if (ft_is_type(s[i]) != 0)
+		if (ft_t(s[i]) != 0)
 		{
-			fmt->typ = ft_is_type(s[i]);
+			fmt->typ = ft_t(s[i]);
 			break ;
 		}
 		++i;
