@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 13:45:35 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 13:45:37 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 13:46:46 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ t_format				ft_format_parse_star(t_format fmt, va_list var)
 **		while character is number :
 **			increase precision as character
 */
-int				ft_format_parse_dot(const char *str, int stt, t_format *fmt, va_list var)
+int						ft_format_parse_dot(const char *str, int stt,
+t_format *fmt, va_list var)
 {
-	int			idx;
+	int					idx;
 
 	idx = stt + 1;
 	if (str[idx] == '*')
