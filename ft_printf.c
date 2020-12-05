@@ -6,23 +6,23 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:02:01 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:02:09 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:29:56 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /*
-ft_printf_sub - structure
-	if character is not % :
-		print that character
-	if character is % and Next character is available :
-		init t_format (all 0)
-		[*]parse (increase idx)
-		if character isnt a type (d, i, c, p, %, ...) :
-			print that character
-		if not :
-			put as parsed data
+**ft_printf_sub - structure
+**	if character is not % :
+**		print that character
+**	if character is % and Next character is available :
+**		init t_format (all 0)
+**		[*]parse (increase idx)
+**		if character isnt a type (d, i, c, p, %, ...) :
+**			print that character
+**		if not :
+**			put as parsed data
 */
 
 int						ft_printf_sub(const char *str, va_list var)
