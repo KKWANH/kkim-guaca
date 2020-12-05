@@ -1,11 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:03:42 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:03:42 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-
-# include <stdio.h>
 
 /*
 typ : types
@@ -91,7 +101,6 @@ int						ft_put_per(t_format fmt);
 ** ft_put_width.c
 */
 int						ft_put_width(int wid, int min, int zer);
-
 
 /*
 ** ft_util_0.c
