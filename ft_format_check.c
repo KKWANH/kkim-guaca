@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_format_check.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 13:52:23 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 13:52:29 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int						ft_is_type(char chr)
+int						ft_t(char chr)
 {
 	if (chr == 'd' || chr == 'i')
 		return (1);
@@ -21,7 +33,7 @@ int						ft_is_type(char chr)
 	return (0);
 }
 
-int						ft_is_flag(char chr)
+int						ft_f(char chr)
 {
 	if (chr == '.' || chr == '*' || chr == '0' ||
 		chr == '-' || chr == ' ')
@@ -29,7 +41,7 @@ int						ft_is_flag(char chr)
 	return (0);
 }
 
-int						ft_is_numb(char chr)
+int						ft_n(char chr)
 {
 	if (chr >= '0' && chr <= '9')
 		return (1);

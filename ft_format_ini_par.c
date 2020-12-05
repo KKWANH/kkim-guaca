@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 13:45:35 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 13:47:34 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 13:51:13 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,33 +99,32 @@ t_format				ft_format_parse_digit(char chr, t_format fmt)
 **	if character is .
 **		execute fmt_format_parse_dot
 */
-int				ft_format_parse(const char *str, int idx, t_format *fmt, va_list var)
+int					ft_format_parse(const char *s, int i,
+t_format *fmt, va_list var)
 {
-	while (str[idx])
+	while (s[i])
 	{
-		if (ft_is_type(str[idx]) == 0 && 
-			ft_is_flag(str[idx]) == 0 &&
-			ft_is_numb(str[idx]) == 0)
+		if (ft_t(s[i]) == 0 && ft_f(s[i]) == 0 && ft_n(s[i]) == 0)
 			break;
-		if (str[idx] == '0' && fmt->wid == 0 && fmt->min == 0)
+		if (s[i] == '0' && fmt->wid == 0 && fmt->min == 0)
 			fmt->zer = 1;
-		if (str[idx] == '*')
+		if (s[i] == '*')
 			*fmt = ft_format_parse_star(*fmt, var);
-		if (str[idx] == '.')
-			idx = ft_format_parse_dot(str, idx, fmt, var);
-		if (str[idx] == '-')
+		if (s[i] == '.')
+			i = ft_format_parse_dot(s, i, fmt, var);
+		if (s[i] == '-')
 		{
 			fmt->min = 1;
 			fmt->zer = 0;
 		}
-		if (ft_is_numb(str[idx]) == 1)
-			*fmt = ft_format_parse_digit(str[idx], *fmt);
-		if (ft_is_type(str[idx]) != 0)
+		if (ft_n(s[i]) == 1)
+			*fmt = ft_format_parse_digit(s[i], *fmt);
+		if (ft_is_type(s[i]) != 0)
 		{
-			fmt->typ = ft_is_type(str[idx]);
+			fmt->typ = ft_is_type(s[i]);
 			break;
 		}
-		++idx;
+		++i;
 	}
-	return (idx);
+	return (i);
 }

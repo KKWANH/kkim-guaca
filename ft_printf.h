@@ -38,14 +38,14 @@ typedef struct			s_format
 ft_format_ini_par.c
 */
 t_format				ft_format_init(void);
-int						ft_format_parse(const char *str, int idx, t_format *fmt, va_list var);
+int						ft_format_parse(const char *s, int i, t_format *fmt, va_list var);
 
 /*
 ft_format_check.c
 */
-int						ft_is_type(char chr);
-int						ft_is_flag(char chr);
-int						ft_is_numb(char chr);
+int						ft_t(char chr);
+int						ft_f(char chr);
+int						ft_n(char chr);
 
 /*
 ft_format_menu.c
