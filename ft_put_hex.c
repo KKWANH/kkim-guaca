@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_hex.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:10:03 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:10:03 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int						ft_put_hex_input(t_format fmt, char *str)
@@ -11,9 +23,6 @@ int						ft_put_hex_input(t_format fmt, char *str)
 	return (cnt);
 }
 
-/*
-
-*/
 int						ft_put_hex_sub(t_format fmt, char *str)
 {
 	int					cnt;
@@ -36,14 +45,14 @@ int						ft_put_hex_sub(t_format fmt, char *str)
 }
 
 /*
-ft_put_hex structure
-	if precision(fmt.pre) is 0 and number is 0 too :
-		put width with width(fmt.wid) and increase count
-		break program
-	set string by ft_utl_base by num setted unsigned long long
-	if low flag is 0 : (means x)
-		set string lower letter
-	put str and increase count
+**ft_put_hex structure
+**	if precision(fmt.pre) is 0 and number is 0 too :
+**		put width with width(fmt.wid) and increase count
+**		break program
+**	set string by ft_utl_base by num setted unsigned long long
+**	if low flag is 0 : (means x)
+**		set string lower letter
+**	put str and increase count
 */
 int						ft_put_hex(t_format fmt, unsigned int num, int low)
 {
