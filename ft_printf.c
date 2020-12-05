@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:02:01 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:29:56 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:32:03 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int						ft_printf_sub(const char *str, va_list var)
 		else if (str[idx] == '%' && str[idx + 1])
 		{
 			idx = ft_format_parse(str, ++idx, &fmt, var);
-			if (ft_is_type(str[idx]) == 0)
+			if (ft_t(str[idx]) == 0)
 				cnt += ft_putchar(str[idx]);
 			else
 				cnt += ft_format_put(fmt, var);
