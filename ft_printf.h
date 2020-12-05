@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:03:42 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:03:42 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:04:18 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@
 # include <stdarg.h>
 
 /*
-typ : types
-		0 : none (not yet)
-		1 : d, i (int)
-		2 : c (char)
-		3 : s (char *)
-		4 : p (pointer)
-		5 : u (unsigned int)
-		6 : x (unsigned hex)
-		7 : X (UNSIGNED HEX)
-		8 : %
-wid : width
-str : * : 0=off, 1=on]
-dot : . : 0=off, 1=on : precision
-zer : 0 : 0=off, 1=on
-min : - : 0=off, 1=on
+**typ : types
+**		0 : none (not yet)
+**		1 : d, i (int)
+**		2 : c (char)
+**		3 : s (char *)
+**		4 : p (pointer)
+**		5 : u (unsigned int)
+**		6 : x (unsigned hex)
+**		7 : X (UNSIGNED HEX)
+**		8 : %
+**wid : width
+**str : * : 0=off, 1=on]
+**dot : . : 0=off, 1=on : precision
+**zer : 0 : 0=off, 1=on
+**min : - : 0=off, 1=on
 */
 typedef struct			s_format
 {
