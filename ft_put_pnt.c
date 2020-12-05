@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_pnt.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:17:35 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:17:36 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 /*
-ft_put_pnt_input structure
-	set count as 2(result from put "0x")
-	if precision(fmt:pre) isnt negative :
-		put width by precision(fmt:pre), length:pointer, 1 and increase count
-		put pointer with precision(fmt:pre)
-	if not :
-		put pointer with length:pointer
+**ft_put_pnt_input structure
+**	set count as 2(result from put "0x")
+**	if precision(fmt:pre) isnt negative :
+**		put width by precision(fmt:pre), length:pointer, 1 and increase count
+**		put pointer with precision(fmt:pre)
+**	if not :
+**		put pointer with length:pointer
 */
+
 int						ft_put_pnt_input(t_format fmt, char *pnt)
 {
 	int					cnt;
@@ -25,14 +38,15 @@ int						ft_put_pnt_input(t_format fmt, char *pnt)
 }
 
 /*
-ft_put_pnt_sub structure
-	if width(fmt:wid) isnt negative and minus is 0 (means right align) :
-		put width by width(fmt:wid) - 2 and increase count
-		put 0x and increase count
-	if not :
-		put 0x and increase count
-		put width by width(fmt:wid) - 2 and increase count
+**ft_put_pnt_sub structure
+**	if width(fmt:wid) isnt negative and minus is 0 (means right align) :
+**		put width by width(fmt:wid) - 2 and increase count
+**		put 0x and increase count
+**	if not :
+**		put 0x and increase count
+**		put width by width(fmt:wid) - 2 and increase count
 */
+
 int						ft_put_pnt_sub(t_format fmt, int cnt)
 {
 	if (fmt.wid >= 0 && fmt.min == 0)
@@ -49,20 +63,21 @@ int						ft_put_pnt_sub(t_format fmt, int cnt)
 }
 
 /*
-ft_put_pnt structure
-	if precision is 0 and num is unavailable :
-		set coutn as result that came from ft_put_pnt_sub by format and count
-		break program
-	set pointer(char *) :
-		set as result that came from ft_utl_base by ull to 16
-		set as small letter
-	if minus(fmt.min) = 1 : (means left align)
-		put pointer by ft_put_pnt_input and increase count
-	if precision isnt negative :
-		put width by width(fmt.wid), length:string and increase count
-	if minus(fmt.min) = 0 : (means right align)
-		put pointer by ft_put_pnt_input and increase count
+**ft_put_pnt structure
+**	if precision is 0 and num is unavailable :
+**		set coutn as result that came from ft_put_pnt_sub by format and count
+**		break program
+**	set pointer(char *) :
+**		set as result that came from ft_utl_base by ull to 16
+**		set as small letter
+**	if minus(fmt.min) = 1 : (means left align)
+**		put pointer by ft_put_pnt_input and increase count
+**	if precision isnt negative :
+**		put width by width(fmt.wid), length:string and increase count
+**	if minus(fmt.min) = 0 : (means right align)
+**		put pointer by ft_put_pnt_input and increase count
 */
+
 int						ft_put_pnt(t_format fmt, unsigned long long num)
 {
 	int					cnt;
