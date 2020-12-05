@@ -6,7 +6,7 @@
 /*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:10:03 by kimkwanho         #+#    #+#             */
-/*   Updated: 2020/12/05 14:10:03 by kimkwanho        ###   ########.fr       */
+/*   Updated: 2020/12/05 14:10:27 by kimkwanho        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int						ft_put_hex_sub(t_format fmt, char *str)
 **		set string lower letter
 **	put str and increase count
 */
+
 int						ft_put_hex(t_format fmt, unsigned int num, int low)
 {
 	char				*str;

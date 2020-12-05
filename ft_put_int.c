@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_int.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:14:48 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:14:50 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int						ft_put_int_input(char *str, int num, t_format fmt)
@@ -58,8 +70,7 @@ int						ft_put_int(t_format fmt, int nm1)
 		--fmt.wid;
 		++cnt;
 	}
-	str = ft_itoa(nm1);
-	cnt += ft_put_int_sub(str, nm2, fmt);
+	cnt += ft_put_int_sub((str = ft_itoa(nm1)), nm2, fmt);
 	free(str);
 	return (cnt);
 }
