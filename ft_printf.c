@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kimkwanho <kimkwanho@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/05 14:02:01 by kimkwanho         #+#    #+#             */
+/*   Updated: 2020/12/05 14:02:09 by kimkwanho        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 /*
@@ -12,6 +24,7 @@ ft_printf_sub - structure
 		if not :
 			put as parsed data
 */
+
 int						ft_printf_sub(const char *str, va_list var)
 {
 	int					cnt;
